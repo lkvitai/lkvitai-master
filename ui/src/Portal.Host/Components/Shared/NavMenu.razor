@@ -1,0 +1,30 @@
+﻿@using System.Net.Http.Json
+@inject HttpClient Http
+
+<ul class="navbar-nav">
+@if (items is null)
+{
+  <li class="nav-item px-3"><span>Loading…</span></li>
+}
+else
+{
+  @foreach (var g in items.GroupBy(i => i.category).OrderBy(g => g.Key))
+  {
+    <li class="nav-item px-3 mt-2"><strong>@g.Key</strong></li>
+    @foreach (var i in g)
+    {
+      <li class="nav-item px-3"><a class="nav-link" href="@i.path" target="content">@i.name</a></li>
+    }
+  }
+}
+</ul>
+
+@code {
+  private record Item(string id, string name, string path, string category);
+  private List<Item>? items;
+
+  protected override async Task OnInitializedAsync()
+  {
+    items = await Http.GetFromJsonAsync<List<Item>>("/manifest");
+  }
+}

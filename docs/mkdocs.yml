@@ -1,0 +1,34 @@
+site_name: LKvitai Docs
+site_description: Internal documentation for LKvitai.MES
+site_url: https://lkvitai.github.io/lkvitai-docs/
+theme:
+  name: material
+  features:
+    - navigation.instant
+    - navigation.sections
+    - content.code.copy
+    - search.suggest
+    - search.highlight
+markdown_extensions:
+  - admonition
+  - attr_list
+  - toc:
+      permalink: true
+  - pymdownx.superfences
+  - pymdownx.details
+plugins:
+  - search
+  - mermaid2
+  - kroki:
+      server_url: https://kroki.io
+nav:
+  - Home: index.md
+  - Architecture:
+    - Overview: 10-architecture/overview.md
+    - C4 Context: 10-architecture/c4/context.md
+    - C4 Container: 10-architecture/c4/container.md
+    - C4 Component: 10-architecture/c4/component.md
+  - ADR: 20-adr/index.md
+  - Ops: 30-ops/index.md
+  - Dev: 40-dev/index.md
+  - Appendix: 99-appendix/index.md

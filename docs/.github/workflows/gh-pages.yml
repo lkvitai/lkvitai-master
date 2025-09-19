@@ -1,0 +1,22 @@
+name: docs
+on:
+  push:
+    branches: [ master, main ]
+  workflow_dispatch: {}
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - name: Install deps
+        run: pip install -r requirements.txt
+      - name: Build
+        run: mkdocs build --strict
+      - name: Deploy
+        run: mkdocs gh-deploy --force

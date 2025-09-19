@@ -1,0 +1,4 @@
+mkdocs-material==9.5.30
+mkdocs-mermaid2-plugin==0.6.0
+mkdocs-kroki-plugin==1.5.0
+pymdown-extensions==10.9

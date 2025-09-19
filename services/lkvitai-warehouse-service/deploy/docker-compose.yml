@@ -1,0 +1,8 @@
+﻿services:
+  api:
+    image: 
+    build:
+      context: .
+      dockerfile: src/Lkvitai.Warehouse.Service.Api/Dockerfile
+    ports:
+      - "8080:8080"

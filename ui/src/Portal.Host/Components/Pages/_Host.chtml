@@ -1,0 +1,26 @@
+@page "/"
+@namespace Portal.Host.Pages
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{ Layout = null; }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>LKvitai Portal</title>
+  <base href="~/" />
+  <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
+</head>
+<body>
+  <app>
+    <div class="d-flex" style="height:100vh">
+      <nav class="border-end p-3" style="width:260px; overflow:auto">
+        <component type="typeof(Portal.Host.Components.Shared.NavMenu)" render-mode="ServerPrerendered" />
+      </nav>
+      <main class="flex-fill">
+        <iframe name="content" src="/" style="border:0;width:100%;height:100%"></iframe>
+      </main>
+    </div>
+  </app>
+  <script src="_framework/blazor.server.js"></script>
+</body>
+</html>
