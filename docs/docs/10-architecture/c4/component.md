@@ -1,4 +1,6 @@
-﻿# C4: Component (Core API)
+# C4: Component (Core API)
+
+## Core API {#core-api}
 
 ```kroki-plantuml
 @startuml
@@ -11,30 +13,3 @@ Container_Boundary(api,"Core API"){
 Rel(orderSvc, ruleSvc, "evaluate")
 @enduml
 ```
-
-```kroki-plantuml
-@startuml
-Alice -> Bob: Hi
-@enduml
-```
-
-
-```kroki {type=plantuml}
-@startuml
-Alice -> Bob: Hi
-@enduml
-```
-
-
-```kroki-plantuml
-@startuml
-Alice -> Bob: Hi
-@enduml
-```
-
-```kroki {type=plantuml}
-@startuml
-Alice -> Bob: Hi (via kroki fence)
-@enduml
-```
-

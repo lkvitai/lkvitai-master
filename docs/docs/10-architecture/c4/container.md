@@ -1,4 +1,6 @@
-﻿# C4: Container
+# C4: Container
+
+## Portal (Blazor) {#portal-blazor}
 
 ```kroki-plantuml
 @startuml
@@ -14,6 +16,8 @@ Rel(user, web, "uses")
 Rel(web, api, "REST")
 Rel(api, db, "CRUD")
 Rel(api, mqtt, "Pub/Sub")
+
+' additional drill-down link into Core API component view
+url of api is [[component/#core-api]]
 @enduml
 ```
-
