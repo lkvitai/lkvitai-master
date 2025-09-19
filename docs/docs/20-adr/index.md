@@ -1,3 +1,4 @@
-# Architecture Decision Records
+﻿# Architecture Decision Records
 
 - [ADR-0001: Record architecture decisions](0001-record-architecture-decisions.md)
+

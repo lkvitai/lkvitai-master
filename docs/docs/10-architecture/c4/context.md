@@ -1,4 +1,4 @@
-# C4: Context
+﻿# C4: Context
 
 ## Mermaid (simple context)
 ```mermaid
@@ -10,7 +10,7 @@ graph TD
 ```
 
 ## PlantUML (C4-PlantUML via Kroki)
-```plantuml
+```kroki-plantuml
 @startuml
 !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Context.puml
 Person(customer, "Customer")
@@ -23,3 +23,4 @@ Rel(system, agnum, "exports invoices")
 Rel(system, avea, "sync stock")
 @enduml
 ```
+

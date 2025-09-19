@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "services/lkvitai-warehouse-service"
+		},
+		{
+			"path": "ui"
+		},
+		{
+			"path": "docs"
+		}
+	]
+}
