@@ -1,0 +1,3 @@
+[submodule "lkvitai-warehouse-service"]
+	path = lkvitai-warehouse-service
+	url = https://github.com/lkvitai/lkvitai-warehouse-service
